@@ -1,0 +1,204 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: transparent;
+  transition: 0.4s;
+  z-index: 1000;
+}
+
+nav.scrolled {
+  background: #2c7a7b;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 6px 10px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: white;
+  color: #2c7a7b;
+  border-radius: 5px;
+}
+
+/* MOBILE MENU */
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 100px 20%;
+  text-align: center;
+  min-height: 100vh;
+}
+#about,
+#services,
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center; /* horizontal center */
+  text-align: center;
+}
+
+/* HOME */
+
+#home {
+  background: url("https://images.unsplash.com/photo-1548199973-03cce0bbc87b")
+    center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home h1 {
+  font-size: 48px;
+}
+
+/* ABOUT */
+
+#about {
+  background: #f4f4f4;
+}
+
+/* SERVICES */
+
+#services {
+  background: #d9f3f4;
+}
+
+/* ADOPTION */
+
+#adoption {
+  background: #ffffff;
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #2c7a7b;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.card button:hover {
+  background: #205c5d;
+}
+
+/* CONTACT */
+
+#contact {
+  background: #f4f4f4;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  background: #2c7a7b;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #2c7a7b;
+    flex-direction: column;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
